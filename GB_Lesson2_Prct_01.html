@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="application/javascript">
+            var dollarCurrency = 78;
+            var euroCurrency = 91;
+            
+            function showMeMyMoney (){
+                var userQuestion = prompt("Сколько рублей сконвертировать?");
+                userQuestion = parseInt(userQuestion);
+                
+                var calcResultDollar = userQuestion / dollarCurrency;
+                calcResultDollar = calcResultDollar.toFixed(2);
+                
+                var calcResultEuro = userQuestion / euroCurrency;
+                calcResultEuro = calcResultEuro.toFixed(2);
+                
+                alert("Вам капитал: " + calcResultDollar + " доллара или " + calcResultEuro + " евро.");
+            };
+            
+            showMeMyMoney();
+            
+        </script>
+    </body>
+</html>

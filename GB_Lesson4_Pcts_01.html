@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script type="application/javascript">
+            var digit_1 = prompt('Введите первое число для сравнения');
+            digit_1 = parseInt(digit_1);
+            
+            var digit_2 = prompt('Введите второе число для сравнения');
+            digit_2 = parseInt(digit_2);
+            
+            var alertOutput = "Первое число оказалось больше второго и равно " + digit_1;
+            var max = digit_1
+            
+            /*if (digit_1 > digit_2) {
+                max = digit_1;
+                alertOutput = "Первое число оказалось больше второго и равно " + digit_1;
+            } else if (digit_1 == digit_2) {
+                max = digit_1;
+                alertOutput = "Оба числа равны " + max;
+            } else {
+                max = digit_2;
+                alertOutput = "Второе число оказалось больше первого и равно " + digit_2;
+            };
+            
+            alert(alertOutput);
+            */
+            
+            if (digit_1 < digit_2) {
+                max = digit_2
+                alertOutput = "Второе число оказалось больше первого и равно " + digit_2;
+                
+            } else {
+                max = digit_1;
+                alertOutput = "Оба числа равны " + max;
+            };
+            
+            alert(alertOutput);
+            
+            /*var typeOfDigit_1 = typeof(digit_1);
+            console.log(typeOfDigit_1);
+            console.log(digit_2);
+            плюсик или "унарный оператор" нифига не то же самое, что и метод parseInt. Иногда возвращает парашу
+            */
+            
+            
+        </script>
+    </body>
+</html>

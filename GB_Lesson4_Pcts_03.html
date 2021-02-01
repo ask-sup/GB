@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        /*let randomNumber = 0;
+                                                                                            
+                        for (i=0; i<=10; i++){
+                        randomNumber = Math.floor(Math.random(0, 101));
+                        randomNumber = Math.random() * 100;
+                        document.write(randomNumber + "<br />");
+                        };*/
+        //let askUserNumber = +prompt("Сколько рандомных чисел раскидать? ", "10");
+
+        /*            function writeRandomNumber (randomNumber){
+                        
+                        let numPool = [ 1, 2, 3, 4, 5, 6 ];
+                            
+                    //rand = numPool[Math.floor(Math.random() * numPool.length)];
+                        
+                        
+                        for (i=0; i<=numPool.length; i++){
+                            
+                            let randomNumber1 = Math.random();
+                            let randomNumber2 = numPool.length * randomNumber1;
+                            
+                            document.write("<br />");
+                            
+                            let randomNumber3 = Math.floor(randomNumber2);
+                            
+                            document.write(++randomNumber3 + "<br />");
+                        
+                        }
+                    };
+                    writeRandomNumber();
+        */
+        let randomNumber = Math.floor(Math.random() * 101);
+
+        let userAnswer = parseInt(prompt('Угадай какое число от 0 до 100 я загадал!'));
+
+        let tryCount = 7;
+        let answerIsTrue = false;
+
+        do {
+            if (userAnswer == randomNumber) {
+                answerIsTrue = true;
+                break;
+            } else {
+                alert(`Мимо! \nЧисло между ${randomNumber-3} и ${randomNumber+3}`);
+                userAnswer = +prompt(`Давай ещё раз! \nОсталось ${tryCount} попытки.`);
+            };
+
+            tryCount--;
+        } while (tryCount > 0);
+
+        if (answerIsTrue == true) {
+            document.write(`<h1>В тыблочко!</h1><h2>Число ${userAnswer} правильное.`);
+        } else {
+            document.write(`<h1>Ты был близко!</h1><h2>Я загадал число ${randomNumber}</h2>`);
+        };
+    </script>
+</body>
+
+</html>
