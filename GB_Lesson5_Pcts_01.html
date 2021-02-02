@@ -12,12 +12,14 @@
             //Функция будет бесконечно проверять соответствие двух введённых параметров пока не получит
             //подтверждение, что пользователь "здался".
             //Функция возвращает массив из двух переменных.
-            //Первая - был ли ответ правильный. Вторая - "здался ли" пользователь. По-умолчанию, обе равны "false". 
+            //Первая - был ли ответ правильный. 
+            //Вторая - "здался ли" пользователь. По-умолчанию, обе равны "false".
             //Функция оттестирована.
 
             let userGaveRightAnswer = false;
             let userGaveUp = false;
             let askUser;
+            //let riddleCorrectAnswerCounter = 0;
             do {
                 let askUser = prompt(riddleText).toLowerCase();
 
@@ -38,14 +40,10 @@
             return [userGaveRightAnswer, userGaveUp];
         };
 
-        //let gameResult = askRiddle("1", "1");
-
-        //document.write(gameResult);
-
         function letsPlay() {
 
-            let riddleText_1 = 'A';
-            let riddleAnswer_1 = 'a';
+            let riddleText_1 = '1';
+            let riddleAnswer_1 = '1';
 
             let riddleText_2 = '2';
             let riddleAnswer_2 = '2';
@@ -55,22 +53,47 @@
 
             let riddleResult = [];
 
+            let riddleCorrectAnswerCounter = 0;
+
             alert('Отгадай три загадки и бох пива тебя вознаградит!');
 
             let readyState = confirm('ГОТОВ?');
 
             if (readyState) {
-                riddleResult = askRiddle(riddleText_1, riddleAnswer_1);
+                let riddleResult1 = askRiddle(riddleText_1, riddleAnswer_1);
+                if (riddleResult1[0] == true) {
+                    riddleCorrectAnswerCounter++;
+                };
+                let riddleResult2 = askRiddle(riddleText_2, riddleAnswer_2);
+                if (riddleResult2[0] == true) {
+                    riddleCorrectAnswerCounter++;
+                };
+
+                let riddleResult3 = askRiddle(riddleText_3, riddleAnswer_3);
+                if (riddleResult3[0] == true) {
+                    riddleCorrectAnswerCounter++;
+                };
+
+                if (riddleResult1[0] || riddleResult2[0] || riddleResult3[0] == true) {
+                    alert(`Ты отгадал ${riddleCorrectAnswerCounter} загадки! Кросаучег.`);
+                } else {
+                    alert('Не твой день. Ничё не угадал, зато ты кросаучек (:')
+                }
+                /*
+                if (riddleResult[0] == true) {
+                    alert('Молодца! Могёшь!');
+                } else if (riddleResult[1] == true) {
+                    alert('А говорил: -"ГОТОВ!" \nНу как так-то? ):');
+                };
+                
+                document.write(riddleResult1 + '<br>');
+                document.write(riddleResult2 + '<br>');
+                document.write(riddleResult3 + '<br>');
+                */
+
             } else {
                 alert('Слабак... ):');
             };
-
-            if (riddleResult[0] == true) {
-                alert('Молодца! Могёшь!');
-            } else if (riddleResult[1] == true) {
-                alert('А говорил: -"ГОТОВ!" \nНу как так-то? ):');
-            };
-
 
         };
 
