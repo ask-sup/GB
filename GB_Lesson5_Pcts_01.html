@@ -7,8 +7,60 @@
 
 <body>
     <script>
-        alert('Отгадай три загадки и бох пива тебя вознаградит! \n Готов?')
-        let askUser = prompt('Погнали! n\Не лает, не кусает, а в до м не пускает. Что это?');
+        function letsPlay() {
+
+            let riddleText_1 = '1';
+            let riddleAnswer_1 = '1';
+
+            let riddleText_2 = '2';
+            let riddleAnswer_2 = '2';
+
+            let riddleText_3 = '3';
+            let riddleAnswer_3 = '3';
+
+            alert('Отгадай три загадки и бох пива тебя вознаградит!');
+            /*if (confirm('Готов?')) {
+                askRiddle();
+            } else {
+                alert('Слабак... ):');
+            };*/
+
+            let riddleResult = askRiddle(riddleText_1, riddleAnswer_1);
+
+            if (riddleResult[1] == true) {
+                alert('Молодца! Могёшь!');
+            } else if (riddleResult[2] == true) {
+                alert('Ну как так-то ):');
+            };
+
+
+        };
+
+        function askRiddle(riddleText, riddleAnswer) {
+            let userGaveRightAnswer = false;
+            let userGaveUp = false;
+            let askUser;
+            do {
+                let askUser = prompt(riddleText);
+
+                if (askUser == riddleAnswer) {
+                    userGaveRightAnswer = true;
+                    break;
+                };
+
+                let userConfirm = confirm('Здаёшься?');
+
+                if (userConfirm == true) {
+                    userGaveUp = true;
+                    break;
+                };
+
+            } while (riddleAnswer != askUser || userGaveUp == true);
+
+            return [userGaveRightAnswer, userGaveUp];
+        };
+
+        letsPlay();
     </script>
 </body>
 
