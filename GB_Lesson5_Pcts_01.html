@@ -19,7 +19,7 @@
             let userGaveRightAnswer = false;
             let userGaveUp = false;
             let askUser;
-            //let riddleCorrectAnswerCounter = 0;
+
             do {
                 let askUser = prompt(riddleText).toLowerCase();
 
@@ -77,19 +77,8 @@
                 if (riddleResult1[0] || riddleResult2[0] || riddleResult3[0] == true) {
                     alert(`Ты отгадал ${riddleCorrectAnswerCounter} загадки! Кросаучег.`);
                 } else {
-                    alert('Не твой день. Ничё не угадал, зато ты кросаучек (:')
-                }
-                /*
-                if (riddleResult[0] == true) {
-                    alert('Молодца! Могёшь!');
-                } else if (riddleResult[1] == true) {
-                    alert('А говорил: -"ГОТОВ!" \nНу как так-то? ):');
+                    alert('Не твой день. Ничё не угадал, зато ты кросаучек (:');
                 };
-                
-                document.write(riddleResult1 + '<br>');
-                document.write(riddleResult2 + '<br>');
-                document.write(riddleResult3 + '<br>');
-                */
 
             } else {
                 alert('Слабак... ):');
