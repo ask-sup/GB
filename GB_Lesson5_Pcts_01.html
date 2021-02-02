@@ -7,36 +7,14 @@
 
 <body>
     <script>
-        function letsPlay() {
-
-            let riddleText_1 = '1';
-            let riddleAnswer_1 = '1';
-
-            let riddleText_2 = '2';
-            let riddleAnswer_2 = '2';
-
-            let riddleText_3 = '3';
-            let riddleAnswer_3 = '3';
-
-            alert('Отгадай три загадки и бох пива тебя вознаградит!');
-            /*if (confirm('Готов?')) {
-                askRiddle();
-            } else {
-                alert('Слабак... ):');
-            };*/
-
-            let riddleResult = askRiddle(riddleText_1, riddleAnswer_1);
-
-            if (riddleResult[1] == true) {
-                alert('Молодца! Могёшь!');
-            } else if (riddleResult[2] == true) {
-                alert('Ну как так-то ):');
-            };
-
-
-        };
-
         function askRiddle(riddleText, riddleAnswer) {
+
+            //Функция будет бесконечно проверять соответствие двух введённых параметров пока не получит
+            //подтверждение, что пользователь "здался".
+            //Функция возвращает массив из двух переменных.
+            //Первая - был ли ответ правильный. Вторая - "здался ли" пользователь. По-умолчанию, обе равны "false". 
+            //Функция оттестирована.
+
             let userGaveRightAnswer = false;
             let userGaveUp = false;
             let askUser;
@@ -58,6 +36,39 @@
             } while (riddleAnswer != askUser || userGaveUp == true);
 
             return [userGaveRightAnswer, userGaveUp];
+        };
+
+        //let gameResult = askRiddle("1", "1");
+
+        //document.write(gameResult);
+
+        function letsPlay() {
+
+            let riddleText_1 = '1';
+            let riddleAnswer_1 = '1';
+
+            let riddleText_2 = '2';
+            let riddleAnswer_2 = '2';
+
+            let riddleText_3 = '3';
+            let riddleAnswer_3 = '3';
+
+            alert('Отгадай три загадки и бох пива тебя вознаградит!');
+            /*if (confirm('Готов?')) {
+                askRiddle();
+            } else {
+                alert('Слабак... ):');
+            };*/
+
+            let riddleResult = askRiddle(riddleText_1, riddleAnswer_1);
+
+            if (riddleResult[0] == true) {
+                alert('Молодца! Могёшь!');
+            } else if (riddleResult[1] == true) {
+                alert('Ну как так-то ):');
+            };
+
+
         };
 
         letsPlay();
