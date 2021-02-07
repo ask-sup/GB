@@ -9,7 +9,8 @@ body {
 }
 
 .classForH1 {
-    font-size: 64px color #1f3f68;
+    font-size: 64px;
+    color: #1f3f68;
 }
 
 .classForH2onContactsPage {
