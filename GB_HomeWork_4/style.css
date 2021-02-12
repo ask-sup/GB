@@ -2,6 +2,13 @@ body {
     font-family: sans-serif;
 }
 
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+li {
+    list-style-type: none;
+}
 .paragClass1 {
     font-size: 16px;
     line-height: 26px;
@@ -30,14 +37,18 @@ body {
     color: #1F3F68;
 }
 
-.inputOnContactPage {
-    border: 1px solid #356ead;
+.contactsForm {
+    border: 1px solid rgb(53, 110, 173, 0.4);
     box-sizing: border-box;
     border-radius: 10px;
-    /* opacity: 0.4; */
 }
 
-.fieldSetOnContactPage {
+.contactsForm > label {
+    display: block;
+    margin: 5% 0 2% 0;
+}
+
+.inputOnContactPage {
     border: 1px solid #356ead;
     box-sizing: border-box;
     border-radius: 10px;
@@ -46,6 +57,7 @@ body {
 
 textarea {
     resize: none;
+    width: 100%;
 }
 
 .sendButton {
@@ -58,4 +70,57 @@ textarea {
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
+
+}
+
+/*Дальше будут стили только для необязательной части 4го ДЗ в качестве эксперимента*/
+
+.contactsHead {
+    text-align: center;
+}
+
+.contactsContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contactsContent {
+    margin-bottom: 5%;
+}
+
+.contactsContent>.info {
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+}
+
+.clearFix {
+    float: none;
+    clear: both;
+}
+
+.contactsForm {
+    width: 30%;
+    float: left;
+    padding: 0 2%;
+}
+
+.contactsMap {
+    float: none;
+    clear: both;
+    width: 950px;
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    margin: 0 auto;
+}
+
+.contactsMap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 950px;
+    max-height: 500px;
 }
