@@ -209,12 +209,15 @@ h1, h2, h3, h4 {
 .footer_top {
     display: flex;
     justify-content: space-between;
-    padding: 0 114px;
+    padding: 96px 114px;
+    align-items: center;
+    flex-wrap: wrap;
 
 }
 
 .footer_top_info {
-    max-width: 494px;
+    flex-basis: 494px;
+    margin-bottom: 40px;
 
 }
 
@@ -223,9 +226,8 @@ h1, h2, h3, h4 {
     line-height: 46px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    margin-top: 91px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     width: 340px;
 }
 
@@ -244,13 +246,9 @@ h1, h2, h3, h4 {
     text-align: center;
     letter-spacing: 0.04em;
     color: #FFF;
-    display: inline-block;
-    height: fit-content;
-    margin-top: 165px;
 }
 
 .footer_hr {
-    margin: 64px 0 39px 0;
     opacity: 0.4;
     color: #FFFFFF;
 }
@@ -262,6 +260,7 @@ h1, h2, h3, h4 {
 .footer_bottom>ul {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 64px;
     
 }
 
@@ -271,11 +270,10 @@ h1, h2, h3, h4 {
     line-height: 26px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    flex-basis: 30gi 0px;
+    flex-basis: 300px;
     flex-grow: 1;
-    margin-left: 23px;
-    margin-top: 25px;
-    padding-left: 50px;
+    margin: 23px 0 0 23px;
+    padding: 0 25px;
 }
 
 .copyright_block {
