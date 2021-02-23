@@ -89,6 +89,7 @@ h1, h2, h3, h4 {
     background-image: url(img/top_background.png);
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: 50%;
 }
 
 .top_button {
@@ -278,6 +279,124 @@ h1, h2, h3, h4 {
 
 .copyright_block {
     margin-top: 64px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .top_info {
+        background-position: right 280px;
+    }
+
+    .card-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        margin-bottom: 32px;
+        padding-bottom: 26px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 668px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        padding-top: 16px;
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .top {
+        height: fit-content;
+        min-height: 376px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+    }
+
+    .top_info {
+        padding-top: 28px;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top_heading {
+        width: 100%;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 37px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .top_text {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .top_button {
+        margin-top: 32px;
+        font-size: 12px;
+        padding: 4px 15px;
+    }
+
+    .what-we-do {
+        padding-top: 48px;
+    }
+
+    .card-box {
+        padding-top: 32px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .text_project {
+        width: 100%;
+    }
+
+    .project_item_text_big {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: right;
+        top: 16px;
+        right: 16px;
+    }
+
+    .project_item_text {
+        font-size: 16px;
+        line-height: 19px;
+        top: 26px;
+        left: 16px;
+    }
+
+    .project_item_child {
+        flex-direction: column;
+        margin-top: 16px;
+
+    }
+
+    .project_item_child>:first-child {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
 }
 
 /*пока хз как правильно выровнить лист согласно адаптивному макету. потом повкуриваю*/
