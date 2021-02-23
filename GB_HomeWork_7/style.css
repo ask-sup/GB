@@ -212,7 +212,6 @@ h1, h2, h3, h4 {
     justify-content: space-between;
     padding: 96px 114px;
     align-items: center;
-    flex-wrap: wrap;
 
 }
 
@@ -297,6 +296,35 @@ h1, h2, h3, h4 {
     .card {
         margin-bottom: 32px;
         padding-bottom: 26px;
+    }
+
+    .footer_top {
+        padding-top: 47px;
+        padding-bottom: 47px;
+
+    }
+
+    .footer_top_info {
+        flex-basis: 340px;
+        margin-bottom: 0;
+        margin-left: 92px;
+    }
+
+    .footer_top_info_heading {
+
+    }
+
+    .footer_top_button {
+        padding: 4px 25px;
+        margin-right: 92px;
+    }
+
+    .footer_bottom {
+        margin: 0 92px;
+    }
+
+    .footer_list {
+        flex-basis: 330px;
     }
 
 
@@ -396,6 +424,51 @@ h1, h2, h3, h4 {
     .project_item_child>:first-child {
         margin-right: 0;
         margin-bottom: 16px;
+    }
+
+    .footer_top {
+        flex-direction: column;
+    }
+
+    .footer_top_info {
+        margin: 0%;
+        flex-basis: unset;
+    }
+
+    .footer_top_info_heading {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        width: 75%;
+        margin: auto;
+
+    }
+
+    .footer_top_text {
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    .footer_top_button {
+        margin: 40px 0 0 0;
+    }
+
+    .footer_bottom {
+        margin: 0;
+
+    }
+
+    .footer_bottom>ul {
+        margin-top: 10px;
+    }
+
+    .copyright_block {
+        margin-top: 32px;
+    }
+
+    .footer {
+        padding-bottom: 32px;
     }
 }
 
