@@ -52,6 +52,10 @@ h1, h2, h3, h4 {
     padding-top: 42px;
 }
 
+.header>:last-child {
+    padding-top: 5px;
+}
+
 .top_heading {
     width: 504px;
     font-weight: 300;
@@ -274,191 +278,6 @@ h1, h2, h3, h4 {
 
 .copyright_block {
     margin-top: 64px;
-}
-
-@media (max-width: 1024px) {
-    .container {
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-    .top_info {
-        background-position: right 280px;
-    }
-
-    .card-box {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card {
-        margin-bottom: 32px;
-        padding-bottom: 26px;
-    }
-
-    .footer_top {
-        padding-top: 47px;
-        padding-bottom: 47px;
-
-    }
-
-    .footer_top_info {
-        flex-basis: 340px;
-        margin-bottom: 0;
-        margin-left: 92px;
-    }
-
-    .footer_top_button {
-        padding: 4px 25px;
-        margin-right: 92px;
-    }
-
-    .footer_bottom {
-        margin: 0 92px;
-    }
-
-    .footer_list {
-        flex-basis: 330px;
-    }
-
-
-}
-
-
-@media (max-width: 668px) {
-    .container {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .header {
-        padding-top: 16px;
-    }
-
-    .heading {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .top {
-        height: fit-content;
-        min-height: 376px;
-        padding-bottom: 40px;
-        box-sizing: border-box;
-    }
-
-    .top_info {
-        padding-top: 28px;
-        background: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .top_heading {
-        width: 100%;
-        font-weight: 300;
-        font-size: 32px;
-        line-height: 37px;
-        text-align: center;
-        margin-bottom: 12px;
-    }
-
-    .top_text {
-        width: 100%;
-        text-align: center;
-
-    }
-
-    .top_button {
-        margin-top: 32px;
-        font-size: 12px;
-        padding: 4px 15px;
-    }
-
-    .what-we-do {
-        padding-top: 48px;
-    }
-
-    .card-box {
-        padding-top: 32px;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .text_project {
-        width: 100%;
-    }
-
-    .project_item_text_big {
-        font-size: 16px;
-        line-height: 19px;
-        text-align: right;
-        top: 16px;
-        right: 16px;
-    }
-
-    .project_item_text {
-        font-size: 16px;
-        line-height: 19px;
-        top: 26px;
-        left: 16px;
-    }
-
-    .project_item_child {
-        flex-direction: column;
-        margin-top: 16px;
-
-    }
-
-    .project_item_child>:first-child {
-        margin-right: 0;
-        margin-bottom: 16px;
-    }
-
-    .footer_top {
-        flex-direction: column;
-    }
-
-    .footer_top_info {
-        margin: 0%;
-        flex-basis: unset;
-    }
-
-    .footer_top_info_heading {
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        width: 75%;
-        margin: auto;
-
-    }
-
-    .footer_top_text {
-        font-size: 16px;
-        line-height: 26px;
-        text-align: center;
-    }
-
-    .footer_top_button {
-        margin: 40px 0 0 0;
-    }
-
-    .footer_bottom {
-        margin: 0;
-
-    }
-
-    .footer_bottom>ul {
-        margin-top: 10px;
-    }
-
-    .copyright_block {
-        margin-top: 32px;
-    }
-
-    .footer {
-        padding-bottom: 32px;
-    }
 }
 
 /*пока хз как правильно выровнить лист согласно адаптивному макету. потом повкуриваю*/
@@ -732,3 +551,308 @@ h1, h2, h3, h4 {
 */
 
 /* КАРТА ВЕРЧЁНАЯ КОНЕЦ */
+
+
+@media (max-width: 1024px) {
+
+    .header {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .top_info {
+        background-position: right 280px;
+    }
+
+    .card-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        margin-bottom: 32px;
+        padding-bottom: 26px;
+    }
+
+    .footer_top_info {
+        flex-basis: 340px;
+        margin-bottom: 0;
+        margin-left: 92px;
+    }
+
+    .footer_top_button {
+        padding: 4px 25px;
+        margin-right: 92px;
+    }
+
+    .footer_bottom>ul {
+        flex-direction: column;
+    }
+
+    .footer_bottom>ul>li {
+        flex-basis: initial;
+    }
+
+    .footer_list {
+        flex-basis: 330px;
+    }
+
+    .contacts {
+        padding: 0;
+    }
+
+    .content {
+        flex-direction: column;
+        flex-wrap: initial;
+        justify-content: initial;
+        align-items: center;
+    }
+
+    .contacts_form {
+        margin-top: 64px;
+    }
+
+    .contactsHead>p {
+        width: 520px;
+        font-size: 20px;
+    }
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .footer_top {
+        padding: 47px 32px;
+    }
+
+    .footer_bottom {
+        padding: 0 124px;
+    }
+
+    .map {
+        margin-top: 64px;
+    }
+
+    .map>iframe {
+        width: 100%;
+    }
+
+    .footer {
+        margin-top: 64px;
+    }
+
+
+}
+
+
+@media (max-width: 668px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header {
+        padding-top: 16px;
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .top {
+        height: fit-content;
+        min-height: 376px;
+        padding-bottom: 40px;
+        box-sizing: border-box;
+    }
+
+    .top_info {
+        padding-top: 28px;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top_heading {
+        width: 100%;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 37px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .top_text {
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .top_button {
+        margin-top: 32px;
+        font-size: 12px;
+        padding: 4px 15px;
+    }
+
+    .what-we-do {
+        padding-top: 48px;
+    }
+
+    .card-box {
+        padding-top: 32px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .text_project {
+        width: 100%;
+    }
+
+    .project_item_text_big {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: right;
+        top: 16px;
+        right: 16px;
+    }
+
+    .project_item_text {
+        font-size: 16px;
+        line-height: 19px;
+        top: 26px;
+        left: 16px;
+    }
+
+    .project_item_child {
+        flex-direction: column;
+        margin-top: 16px;
+
+    }
+
+    .project_item_child>:first-child {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .footer_top {
+        flex-direction: column;
+    }
+
+    .footer_top_info {
+        margin: 0%;
+        flex-basis: unset;
+    }
+
+    .footer_top_info_heading {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        width: 75%;
+        margin: auto;
+
+    }
+
+    .footer_top_text {
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    .footer_top_button {
+        margin: 40px 0 0 0;
+    }
+
+    .footer_bottom {
+        margin: 0;
+
+    }
+
+    .footer_bottom>ul {
+        margin-top: 10px;
+    }
+
+    .copyright_block {
+        margin-top: 32px;
+    }
+
+    .footer {
+        padding-bottom: 32px;
+    }
+
+    .header {
+        padding: 10px 16px;
+    }
+
+    .contactsHead {
+        margin-top: 0;
+        padding: 48px 0 61px 0;
+        height: fit-content;
+    }
+
+    .contacts_main_header {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .contactsHead>p {
+        width: 100%;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contacts_form {
+        width: 90%;
+        margin-top: 32px;
+        padding: 0 36px;
+    }
+    .contacts_header_mini {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        margin-top: 36px;
+    }
+
+    .contacts_form>label {
+        font-size: 14px;
+        margin: 20px 0 2px 0;
+    }
+    .contacts_form_input {
+        height: 46px;
+    }
+    .contacts_form_input_message {
+        height: 92px;
+    }
+    .contacts_form_send_button {
+        padding: 10px 0;
+    }
+    .map {
+        margin-top: 32px;
+    }
+    .footer {
+        margin-top: 32px;
+    }
+    .footer_top {
+        padding: 16px;
+    }
+    .footer_bottom {
+        padding: 16px;
+    }
+    .footer_top_button {
+        margin: 32px 0;
+    }
+}
