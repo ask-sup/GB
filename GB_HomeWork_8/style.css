@@ -573,32 +573,101 @@ h1, h2, h3, h4 {
     list-style-type: none;
 }
 
+.contacts_info_phones_list>li {
+    display: inline-flex;
+}
+
+.contacts_info_phones_list>li::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    display: block;
+    background-image: url("img/contacts_icon/ic_phone_24px.svg");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+
+}
+
+.contacts_info_service_list>li {
+    display: flex;
+}
+
+.contacts_info_service_list>li:first-child::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    display: block;
+    background-image: url("img/contacts_icon/ic_language_24px.svg");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+}
+
+.contacts_info_service_list>li:last-child::before {
+    content: "";
+    width: 36px;
+    height: 36px;
+    display: block;
+    background-image: url("img/contacts_icon/ic_email_24px.svg");
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+}
+
+.contacts_info_service_list>li>a {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    outline: none;
+    text-decoration: none;
+}
+
 .contacts_form {
     width: 540px;
     background: #FFFFFF;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 56px;
+    height: fit-content;
 }
 
-.contactsForm > label {
+.contacts_form>.contacts_header_mini {
+    margin-bottom: 16px;
+}
+
+.contacts_form>label {
     display: block;
-    margin: 5% 0 2% 0;
+    margin: 32px 0 8px 0;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
 }
 
-.inputOnContactPage {
+.contacts_form_input {
     border: 1px solid #356ead;
     box-sizing: border-box;
     border-radius: 10px;
     opacity: 0.4;
+    height: 72px;
+    padding-left: 32px;
 }
 
-textarea {
+.contacts_form_input_message {
     resize: none;
     width: 100%;
+    opacity: 0.4;
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 144px;
+    padding: 21px 32px;
 }
 
-.sendButton {
+.contacts_form_send_button {
     background: #5A98D0;
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
@@ -606,15 +675,14 @@ textarea {
     font-size: 16px;
     line-height: 26px;
     text-align: center;
+    letter-spacing: 0.04em;
     color: #FFFFFF;
     text-transform: uppercase;
     display: block;
-    margin: 5% auto 7% auto;
-
-}
-
-.contactsForm {
-    padding: 2% 2% 0 2%;
+    border: 0;
+    margin-top: 72px;
+    margin-bottom: 56px;
+    padding: 23px 0;
 }
 
 /* ЕРЕСЬ КОНЕЦ */
