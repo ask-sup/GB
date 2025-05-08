@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        function askRiddle(riddleText, riddleAnswer) {
+
+            //Функция будет бесконечно проверять соответствие двух введённых параметров пока не получит
+            //подтверждение, что пользователь "здался".
+            //Функция возвращает массив из двух переменных.
+            //Первая - был ли ответ правильный. 
+            //Вторая - "здался ли" пользователь. По-умолчанию, обе равны "false".
+            //Функция оттестирована.
+
+            let userGaveRightAnswer = false;
+            let userGaveUp = false;
+            let askUser;
+
+            do {
+                let askUser = prompt(riddleText).toLowerCase();
+
+                if (askUser == riddleAnswer) {
+                    userGaveRightAnswer = true;
+                    break;
+                };
+
+                let userConfirm = confirm('Здаёшься?');
+
+                if (userConfirm == true) {
+                    userGaveUp = true;
+                    break;
+                };
+
+            } while (riddleAnswer != askUser || userGaveUp == true);
+
+            return [userGaveRightAnswer, userGaveUp];
+        };
+
+        function letsPlay() {
+
+            let riddleText_1 = '1';
+            let riddleAnswer_1 = '1';
+
+            let riddleText_2 = '2';
+            let riddleAnswer_2 = '2';
+
+            let riddleText_3 = '3';
+            let riddleAnswer_3 = '3';
+
+            let riddleResult = [];
+
+            let riddleCorrectAnswerCounter = 0;
+
+            alert('Отгадай три загадки и бох пива тебя вознаградит!');
+
+            let readyState = confirm('ГОТОВ?');
+
+            if (readyState) {
+                let riddleResult1 = askRiddle(riddleText_1, riddleAnswer_1);
+                if (riddleResult1[0] == true) {
+                    riddleCorrectAnswerCounter++;
+                };
+                let riddleResult2 = askRiddle(riddleText_2, riddleAnswer_2);
+                if (riddleResult2[0] == true) {
+                    riddleCorrectAnswerCounter++;
+                };
+
+                let riddleResult3 = askRiddle(riddleText_3, riddleAnswer_3);
+                if (riddleResult3[0] == true) {
+                    riddleCorrectAnswerCounter++;
+                };
+
+                if (riddleResult1[0] || riddleResult2[0] || riddleResult3[0] == true) {
+                    alert(`Ты отгадал ${riddleCorrectAnswerCounter} загадки! Кросаучег.`);
+                } else {
+                    alert('Не твой день. Ничё не угадал, зато ты кросаучек (:');
+                };
+
+            } else {
+                alert('Слабак... ):');
+            };
+
+        };
+
+        letsPlay();
+    </script>
+</body>
+
+</html>
